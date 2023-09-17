@@ -36,4 +36,10 @@ public class HeroController {
            .findFirst()
            .orElse(null);
     }
+    
+    @GetMapping
+    @RolesAllowed({"heroes-user", "heroes-admin"})
+    public Hero hero() {
+           return someHeroes;
+    }
 }
