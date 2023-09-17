@@ -39,7 +39,9 @@ public class HeroController {
     
     @GetMapping
     @RolesAllowed({"heroes-user", "heroes-admin"})
-    public Hero hero() {
-           return someHeroes;
+    public String hero() {
+    	
+    	Hero hero = new Hero();
+           return hero.getName();
     }
 }

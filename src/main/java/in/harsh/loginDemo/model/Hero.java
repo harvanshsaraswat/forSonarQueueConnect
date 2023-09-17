@@ -1,8 +1,13 @@
 package in.harsh.loginDemo.model;
 
 public class Hero {
-private final int id;
-private final String name;
+private  int id;
+private  String name;
+
+
+public Hero() {
+	super();
+}
 public Hero(int id, String name) {
           this.id = id;
           this.name = name;
